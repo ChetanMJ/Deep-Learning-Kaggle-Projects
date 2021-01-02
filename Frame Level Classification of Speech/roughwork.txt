@@ -1,0 +1,20 @@
+   #utterance_length = x[i].shape[0]
+   '''
+   zero_padding = np.zeros((5,40), dtype = float)
+   input_tmp = np.append(zero_padding,x[i], axis = 0 )
+   input = np.append(input_tmp,zero_padding, axis = 0 )
+   flat_utterance = input.flatten()
+   
+    
+   for j in range(utterance_length):
+       x = flat_utterance[j : ((((2*k) + 1) * feature_length) + j)]
+       y = x.reshape(1,(((2*k) + 1) * feature_length))
+       final_input = np.append(final_input, y, axis = 0)
+       
+final_input =   final_input[1:, :]   
+    
+print(final_input.shape)
+    ''' 
+    
+    
+ (675836, 120)
